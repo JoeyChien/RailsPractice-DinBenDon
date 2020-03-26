@@ -1,3 +1,3 @@
 # README
 
-* 訂便當系統# RailsPractice
+* 練習做一個訂便當系統
