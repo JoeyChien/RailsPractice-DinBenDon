@@ -1,0 +1,7 @@
+/*
+ * require_tree .
+ *= require 'user_form' 
+ *= require_self
+ */
+/* assets pipeline */
+/* require_self 載入下方其他自己寫的css */
