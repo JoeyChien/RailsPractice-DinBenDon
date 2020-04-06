@@ -28,6 +28,9 @@ class ItemsController < ApplicationController
   end
 
   def update
+    # 中斷點
+    # debugger
+
     if @item.update(item_params)
       redirect_to items_path, notice: '成功更新餐點'
     else
@@ -49,6 +52,7 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name,
                                  :description,
                                  :price,
-                                 :spec)
+                                 :spec,
+                                 :category_id)
   end
 end

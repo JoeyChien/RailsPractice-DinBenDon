@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get "/sign_up", to: "users#signup"
   post "/sign_up", to: "users#register"  
 
-  root "welcome#index"
+  root "items#index"
 end
