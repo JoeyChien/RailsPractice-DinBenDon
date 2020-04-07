@@ -14,8 +14,9 @@ class UsersController < ApplicationController
                         password: user_params[:password])
     if user
       session[:ccc9527] = user.email
+      redirect_to root_path
     else
-        redirect_to login_path
+      redirect_to login_path
     end                      
   end
 
