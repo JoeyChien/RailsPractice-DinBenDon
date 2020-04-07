@@ -1,8 +1,11 @@
 class ApplicationController < ActionController::Base
 
   before_action :check_login
+  
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found  
   
+  helper_method :current_user
+
   private
 
   def check_login
