@@ -1,1 +1,2 @@
-// alert('hi');
+
+import 'bootstrap/dist/css/bootstrap.css'
