@@ -8,11 +8,13 @@ class CartItem
   end
 
   def increment!(amount = 1)
+    # @quantity不可拿掉@，因為在等號左邊會是變數
     @quantity += amount
   end
 
   def item
-    Item.find(@item_id)
+    # @item_id 拿掉@會變成方法
+    Item.find(item_id)
   end
 
   def total
