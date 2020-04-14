@@ -21,12 +21,24 @@ RSpec.describe Cart, type: :model do
       2.times { cart.add_item(1) }
 
       expect(cart.items.count).to be 2
-
     end
+
+    it "商品可以放到購物車裡，也可以再拿出來" do
+      cart = Cart.new
+
+      i1 = FactoryBot.create(:item)
+      i2 = FactoryBot.create(:item)
+
+      3.times { cart.add_item(i1.id) }
+      2.times { cart.add_item(i2.id) }
+
+      expect(cart.items.first.item).to be_an Item
+      expect(cart.items.first.item.price).to be i1.price
+    end    
+
   end
 
   describe "進階功能" do
   end
 
-  pending "密碼加密"
 end
